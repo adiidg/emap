@@ -1,0 +1,172 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poetsen+One&family=Sevillana&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+
+}
+
+
+/* Global Values */
+:root{
+    --text_colour: rgb(60, 52, 52);
+        --border_colour: grey;
+        --button_gradient: linear-gradient(to right,
+                #1e7408 0%,
+                #3eb81c 51%,
+                #60c73e 100%);
+        --input_text_colur: #36454F;
+        --input_fontsize: 20px;
+        --input_background_colur: #c5ffc7;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;  
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: #bcf8ac;
+}
+
+.sign_up_container{
+    height: 90vh;
+    width: 90%;
+}
+
+/* top titles */
+.titles{
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.titles h1{
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--text_colour);
+}
+
+.titles p{
+    color: var(--text_colour);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* ----------------------------------Form----------------------------- */
+form{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input_details{
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--input_background_colur);
+}
+
+.input_details i{
+    margin-right: 15px;
+    color: var(--input_text_colur);
+    font-size: 20px;
+}
+
+.input_details input{
+    width: 100%;
+    background: transparent;
+    border: 0;   
+    outline: none;
+    color: var(--input_text_colur);
+    font-size: var(--input_fontsize);
+}
+
+/* ----------------------------------Submit Button------------------------- */
+.submit_button_container{
+    width: 100%;
+    height: 50px; 
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+
+.submit_button_container button{
+    height: 100%;
+    background: var(--button_gradient);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 50px;
+    color: white;
+}
+
+/* -------------------------------Already have Account--------------------- */
+.login_Form{
+    width: 100%;
+    height: 50px;
+    color: var(--standard_font_colour);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 100%;
+    }
+  }
+  
+  /* Styles for small devices (tablets, typically 600px to 768px) */
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+    .container{
+        width: 400px;
+    }
+    body{
+        background: #bcf8ac;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+  }
+  
+  /* Styles for medium devices (desktops, typically 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .container{
+        width: 400px;
+    }
+    body{
+        background: #bcf8ac;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+  }

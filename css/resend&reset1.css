@@ -1,0 +1,155 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+:root{
+    --text_colour: rgb(60, 52, 52);
+        --border_colour: grey;
+        --button_gradient: linear-gradient(to right,
+                #1e7408 0%,
+                #3eb81c 51%,
+                #60c73e 100%);
+        --input_text_colur: #36454F;
+        --input_fontsize: 20px;
+        --input_background_colur: #c5ffc7;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+
+}
+
+.container{
+    width: 100%;
+    height: 100%;  
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: #bcf8ac;
+}
+
+.login_in_container{
+    height: 90vh;
+    width: 90%;
+    padding: 20px 0;
+}
+
+/* --------------------------------------Title----------------------------------- */
+.title{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.title h2{
+    font-weight: 800;
+    color: var(--text_colour);
+}
+
+
+/* --------------------------------------------Form -----------------------*/
+form{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+form .input_details{
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--input_background_colur);
+}
+
+form .input_details i{
+    margin-right: 15px;
+    color: var(--input_text_colur);
+    font-size: 20px;
+}
+
+form .input_details input{
+    width: 100%;
+    background: transparent;
+    border: 0;   
+    outline: none;
+    color: var(--input_text_colur);
+    font-size: var(--input_fontsize);
+}
+
+form .button_container{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .button_container button{
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 70%;
+    border-radius: 50px;
+    background: var(--button_gradient);
+    font-size: 25px;
+    color: white;
+    font-weight: 400;
+}
+
+/* -------------------------------media query------------------------------------ */
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 100%;
+    }
+  }
+  
+  /* Styles for small devices (tablets, typically 600px to 768px) */
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+    .container{
+        width: 400px;
+    }
+    body{
+        background: #bcf8ac;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+  }
+  
+  /* Styles for medium devices (desktops, typically 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .container{
+        width: 400px;
+    }
+    body{
+        background: #bcf8ac;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+  }

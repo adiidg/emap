@@ -1,0 +1,76 @@
+html {
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 100px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    html {
+        font-size: 13.5px;
+    }
+}
+
+@media only screen and (min-width: 424px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 14.5px;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    html {
+        font-size: 15.5px;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    html {
+        font-size: 16px;
+    }
+}
+*{
+    margin: auto;
+    padding: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+.main1{
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
+    background-image: url(2img22.jpg);
+}
+.main{
+    padding-top: 2rem;
+    text-align: center;
+    padding-bottom: 25rem;
+}
+.main p{
+    max-width: 75%;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.551);
+    border-radius: 1rem;
+    font-size: 2.3rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.main iframe{
+    padding: 1rem;
+    max-width: 93.5%;
+    border-radius: 1.5rem;
+}

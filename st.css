@@ -1,0 +1,76 @@
+html {
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 100px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    html {
+        font-size: 13.5px;
+    }
+}
+
+@media only screen and (min-width: 424px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 14.5px;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    html {
+        font-size: 15.5px;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    html {
+        font-size: 16px;
+    }
+}
+*{
+    margin: auto;
+    padding: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+.main1{
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
+    background-image: url(3img.png);
+}
+.main{
+    padding-top: 5rem;
+    text-align: center;
+    padding-bottom: 25rem;
+}
+.main button{
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 1.4rem 1.4rem 1.4rem;
+    border-radius: 1rem;
+    background-color: rgba(172, 255, 47, 0.759);
+}
+.main button:hover{
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 1.4rem 1.4rem 1.4rem;
+    border-radius: 1rem;
+    background-color: rgba(89, 147, 3, 0.759);
+}

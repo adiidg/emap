@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poetsen+One&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poetsen+One&family=Sevillana&display=swap');
+
+/* Global Values */
+:root{
+    --main_background: 	#111e14;
+    --line_colour: 	rgb(128,128,128);
+    --font_colour: rgb(240, 240, 240);
+    --secondary_font_colour: rgb(128,128,128);
+    --button_colur: #FFC71B;
+    --faint_orange: #ffc800;
+    --line_transition: all 0.4s ease-in;
+    --input_colur: #3f3f3fb9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Lato", sans-serif;
+    color: white;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+    background: var(--main_background);
+}
+
+button{
+    outline: none;
+    border: none;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background: var(--main_background);
+    position: relative;
+}
+
+/* ---------------------------------Navigation Tab--------------------------- */
+nav{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--line_colour);
+    margin-bottom: 10px;
+}
+
+nav .menu_container{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .menu_container button{
+    height: 100%;
+    width: 40px;
+    background: transparent;
+}
+
+nav .menu_container button:nth-child(1){
+    border-radius: 50%;
+    background: var(--faint_orange);
+}
+
+nav .menu_container button i{
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* --------------------------------------Profile Image---------------------------------- */
+.profile_image_container{
+    height: 160px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.profile_image_container .image_container{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border:2px dashed var(--button_colur);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.profile_image_container .image_container img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ----------------------------------User Name and UserId---------------------------------- */
+.name_username_container{
+    height: 55px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.name_username_container > h2{
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.name_username_container > h4{
+    font-size: 20px;
+    color: var(--secondary_font_colour);
+}
+
+/* --------------------------------------Followers And Following Sections-------------- */
+.following_section{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.following_section button{
+    height: 80%;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: transparent;
+}
+
+.following_section button h3, h2{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* -----------------------------------About Me-------------------------------- */
+.user_info_container{
+    height: auto;
+    background: var(--input_colur);
+    margin: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--line_colour);
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user_info_container> h3{
+    width: 100%;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--faint_orange);
+
+}
+.user_info_container .about_me{
+    height: auto;
+    width: 100%;
+    text-align: left;
+}
+
+.user_info_container .about_me p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* ----------------------------------Following Buttin---------------------- */
+.follow_container{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow_container button{
+    width: 150px;
+    height: 100%;
+    border-radius: 30px;
+    background: var(--button_colur);
+}
+
+.follow_container button h3{
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 700;
+} 
+
+.follow_container img{
+    width: 100px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+} 
+/* ===================================SideBar======================================== */
+
+/* ------------------------------------Side Bar Title Container---------------------------- */
+.sidebar_container{
+    background: var(--main_background);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.open_sidebar_button_active{
+    left: 0;
+}
+
+.close_sidebar_button_active{
+    left: -100%;
+}
+
+.sidebar_container .close_button_container{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sidebar_container button{
+    background: transparent;
+}
+
+.sidebar_container .close_button_container button{
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.sidebar_container .close_button_container button i{
+    font-size: 24px;
+    font-weight: 800;
+}
+.sidebar_container .close_button_container h2{
+    height: 50px;
+    width: 100px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+/* ------------------------------------Side Bar Menu Container----------------------- */
+.sidebar_options{
+    width: 100%;
+    height: 280px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--line_colour);
+}
+
+.sidebar_options ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar_options ul li{
+    width: 100%;
+    height: 40px;   
+}
+
+.sidebar_options ul li button{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar_options ul li button i{
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.sidebar_options ul li button h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+/* -----------------------------------Bottom SideBar Options------------------------- */
+.logo_out_container{
+    position: relative;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo_out_container button,a{
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+
+.logo_out_container button,a h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.logo_out_container button:nth-child(2),a h3{
+    color: rgb(180, 40, 40);
+}
+
+.logo_out_container button:nth-child(1) h3{
+    color: rgb(24, 39, 168);
+}
+/* ===================================Edit Profile=================================== */
+/* -----------------------------------Edit Profile Title------------------------------ */
+.edit_profile_container{
+    background: var(--main_background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    display: none;
+}
+
+.edit_profile_title_container{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.edit_profile_left_container{
+    height: 100%;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edit_profile_left_container button{
+    height: 100%;
+    width: 50px;
+    background: transparent;
+}
+
+.edit_profile_left_container button i{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.edit_profile_left_container h2{
+    height: 50px;
+    width: 150px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit_profile_title_container #edit_profile_close_button{
+    height: 100%;
+    width: 100px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--button_colur);
+    background: transparent;
+}
+
+/* ------------------------------Edit Profile Image_Preview Container---------------------------- */
+.edit_profile_main_container{
+    height: 160px;
+    width: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.edit_profile_main_container .edit_profile_inner_image_container{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border:2px dashed var(--button_colur);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.edit_profile_main_container .edit_profile_inner_image_container img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* -----------------------------------Edit profile form container-------------------- */
+.form_container{
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+}
+
+.form_container form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form_container form .edit_profile_input_container{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form_container form .edit_profile_input_container h3{
+    font-size: 20px;
+    padding: 0 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--faint_orange);
+}
+
+.form_container form .edit_profile_input_container input{
+    height: 60%;
+    border: none;
+    border-bottom: 2px solid var(--line_colour);
+    background: transparent;
+    outline: none;
+    padding: 0 10px;
+    font-size: 19px;
+}
+
+
+/* -----------------------------------Bottom Space----------------------------------- */
+.space_at_end{
+    height: 70px;
+    width: 100%;
+}
+
+/* -----------------------------------Bottom Navigation------------------------------- */
+.bottom_navigation{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main_background);
+}
+
+.bottom_nav_container{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.bottom_nav_container button{
+    width: 50px;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.bottom_nav_container button i{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.bottom_nav_container .bottom_nav_active i{
+    color: orange;
+    transform: scale(1.2);
+}
+
+.bottom_sliding_line{
+    height: 4px;
+    width: 60px;
+    background: rgb(243, 159, 3);
+    position: absolute;
+    bottom: 5px;
+    left: 5%;
+    transition: var(--line_transition);
+}
+
+
+/*made by adii*/

@@ -1,0 +1,91 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Franklin+Gothic+Medium:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background: #6ced6c;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    background: #99f273;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.notification {
+    background: #ffcccb;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #d8000c;
+    font-weight: 700;
+}
+
+.nav {
+    margin-bottom: 1rem;
+}
+
+.nav a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    display: block;
+}
+
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background: linear-gradient(to right, #1e7408 0%, #3eb81c 51%, #60c73e 100%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #3eb81c;
+}

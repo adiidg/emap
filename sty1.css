@@ -1,0 +1,160 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Franklin+Gothic+Medium:wght@400;600;700&display=swap');
+
+/* Responsive font sizes */
+html {
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 100px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    html {
+        font-size: 13.5px;
+    }
+}
+
+@media only screen and (min-width: 424px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 14.5px;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    html {
+        font-size: 15.5px;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-size: cover;
+    background-image: url('img.jpg');
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.logout-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(255, 69, 58, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 69, 58, 1);
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.main1{
+        width: 40%;
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 1rem;
+    }
+.main2 {
+    width: 40%;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.main1 {
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main2 {
+    background: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+}
+
+.main1 button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background: linear-gradient(to right, #1e7408 0%, #3eb81c 51%, #60c73e 100%);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+    margin-bottom: 1rem;
+    width: 300px;
+}
+
+.main1 button:hover {
+    background-color: rgba(89, 147, 3, 0.759);
+}
+
+.main2 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 1rem;
+}
